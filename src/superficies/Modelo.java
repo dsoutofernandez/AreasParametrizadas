@@ -6,12 +6,13 @@
 
 package superficies;
 
+import java.util.Scanner;
+
 /**
  *
  * @author dsoutofernandez
  */
 public class Modelo {
-    
     
     
     
