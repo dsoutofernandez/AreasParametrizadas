@@ -13,8 +13,13 @@ public class Superficies {
      */
     public static void main(String[] args) {
         
+        Vista v = new Vista();
+        Modelo mod;
         
-
+       v.setShapeType();
+       mod = new Modelo(v.getShapeType());
+       v.result(mod.Evaluation(mod.getOpType()));
+        
         
         
 
