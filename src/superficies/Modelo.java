@@ -14,16 +14,17 @@ import java.util.Scanner;
  */
 public class Modelo {
     
-            float squareArea;
-            float sideLength;
-            float sideHeight;
+           float squareArea;
+            //float sideLength;
+            //float sideHeight;
             float rectangleArea;
-             float baseLength;
-            float height;
+            // float baseLength;
+           // float height;
             float triangleArea;
-            float radius;
+            //float radius;
             float circleArea;
-    
+    float op1;
+    float op2;
     
     String OpType;
 
@@ -32,6 +33,19 @@ public class Modelo {
      */
     public Modelo() {
     }
+
+    public Modelo(float op1, float op2, String OpType) {
+        this.op1 = op1;
+        this.op2 = op2;
+        this.OpType = OpType;
+    }
+
+    public Modelo(float op1, String OpType) {
+        this.op1 = op1;
+        this.OpType = OpType;
+    }
+    
+    
 
     /**
      * Parameters builder
@@ -74,7 +88,7 @@ public class Modelo {
             //System.out.println("what is the side length?");
             //Scanner sL = new Scanner(System.in);
             //sideLength = sL.nextFloat();
-            squareArea = sideLength * sideLength;
+            squareArea = op1 * op2;
             //System.out.println("The area for your square: " + squareArea);
             
             return squareArea;
@@ -88,7 +102,7 @@ public class Modelo {
             //System.out.println("What is the rectangles height?");
             //Scanner sH = new Scanner(System.in);
             //sideHeight = sH.nextFloat();
-            rectangleArea = sideLength * sideHeight;
+            rectangleArea = op1 * op2;
             //System.out.println("The area for your rectangle is: " + rectangleArea);
 
             return rectangleArea;
@@ -102,7 +116,7 @@ public class Modelo {
             //System.out.println("What is the height of the triangle?");
             //Scanner H = new Scanner(System.in);
            // height = H.nextFloat();
-            triangleArea = (float) (0.5 * baseLength * height);
+            triangleArea = (float) (0.5 * op1 * op2);
             //System.out.println("Your triangles area is: " + triangleArea);
             
             return triangleArea;
@@ -113,7 +127,7 @@ public class Modelo {
             //System.out.println("What is the radius of the circle?");
             //Scanner R = new Scanner(System.in);
             //radius = R.nextFloat();
-            circleArea = radius * radius;
+            circleArea = op1 * op1;
             circleArea = (float) (3.14159265 * circleArea);
             //System.out.println("Your Circles area is " + circleArea);
 
